@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EdgeGas BP Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>EdgeGas Business Plan Simulator</h1>
+    <form id="bp-form">
+      <div class="grid">
+        <label>Year 1 Revenue (€):<input type="number" id="revenue" value="500000" required></label>
+        <label>Revenue Growth (%):<input type="number" id="growth" value="50" required></label>
+        <label>Gross Margin (%):<input type="number" id="margin" value="30" required></label>
+        <label>Fixed Costs (€):<input type="number" id="costs" value="250000" required></label>
+        <label>Cost Growth (%):<input type="number" id="costGrowth" value="10" required></label>
+        <label>Initial Investment (€):<input type="number" id="investment" value="200000" required></label>
+        <label>Projection Years:<input type="number" id="years" value="5" required></label>
+        <label>Discount Rate (%):<input type="number" id="discount" value="8" required></label>
+      </div>
+      <button type="submit">Simulate</button>
+    </form>
+    <div id="results"></div>
+    <canvas id="chart" height="100"></canvas>
+    <button onclick="exportPDF()">Export PDF</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
